@@ -1,0 +1,59 @@
+/* Estilos básicos */
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #222;
+}
+
+header { text-align: center; }
+
+section {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+footer { text-align: center; color: #666; font-size: 14px; }
+
+/* Utilidades */
+.oculto { display: none !important; }
+.fila { margin-bottom: 10px; }
+
+/* Botones e inputs */
+button { padding: 6px 12px; cursor: pointer; }
+input { padding: 5px; margin: 2px 0; }
+label { display: block; margin-bottom: 8px; }
+label input { display: block; }
+
+/* Listas */
+ul { padding-left: 20px; }
+li { margin-bottom: 6px; }
+li button { margin-left: 10px; }
+
+/* Ejercicio 2 */
+.texto-grande { font-size: 20px; }
+
+/* Ejercicio 7: tarjetas */
+.rejilla { display: flex; flex-wrap: wrap; gap: 10px; }
+.producto { border: 1px solid #999; padding: 10px; width: 170px; }
+.producto h3 { margin: 0 0 5px; font-size: 16px; }
+.producto p { margin: 3px 0; }
+.agotado { color: red; }
+
+/* Mensajes */
+.error { color: red; }
+input.invalido { border: 2px solid red; }
+.resultado { border: 1px solid green; padding: 10px; margin-top: 10px; }
+
+/* Ejercicio 9: tareas */
+.tarea-texto { cursor: pointer; }
+.tarea-completada .tarea-texto { text-decoration: line-through; color: #888; }
+
+/* Ejercicio 10: tabla */
+table { border-collapse: collapse; width: 100%; margin-top: 15px; }
+th, td { border: 1px solid #ccc; padding: 6px; text-align: left; }
+th { background: #eee; }
+tr.editando { background: #fff3cd; }
+.acciones button { margin-right: 5px; margin-left: 0; }

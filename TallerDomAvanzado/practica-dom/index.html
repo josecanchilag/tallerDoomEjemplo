@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Práctica DOM con JavaScript</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Práctica DOM con JavaScript</h1>
+    <p>Lenguajes de Programación · 10 ejercicios</p>
+  </header>
+
+  <main>
+
+    <!-- 1. Cambiar un título con un botón -->
+    <section id="ej1">
+      <h2>1. Cambiar un título con un botón</h2>
+      <h3 id="titulo-ej1">Hola, DOM</h3>
+      <button id="btn-titulo" class="btn">Cambiar título</button>
+    </section>
+
+    <!-- 2. Cambiar el color de un texto -->
+    <section id="ej2">
+      <h2>2. Cambiar el color de un texto</h2>
+      <p id="texto-color" class="texto-grande">Este texto cambia de color.</p>
+      <div class="fila">
+        <button class="btn btn-color" data-color="#e63946">Rojo</button>
+        <button class="btn btn-color" data-color="#2a9d8f">Verde</button>
+        <button class="btn btn-color" data-color="#1d4ed8">Azul</button>
+        <button class="btn btn-secundario" id="btn-color-reset">Restablecer</button>
+      </div>
+    </section>
+
+    <!-- 3. Mostrar / ocultar un elemento -->
+    <section id="ej3">
+      <h2>3. Mostrar / ocultar un elemento</h2>
+      <button id="btn-toggle" class="btn">Ocultar mensaje</button>
+      <p id="mensaje-toggle" class="aviso">Ahora me ves. Pulsa el botón y desaparezco.</p>
+    </section>
+
+    <!-- 4. Crear elementos dinámicamente -->
+    <section id="ej4">
+      <h2>4. Crear elementos dinámicamente</h2>
+      <div class="fila">
+        <input type="text" id="input-item" placeholder="Escribe un elemento" autocomplete="off">
+        <button id="btn-crear" class="btn">Agregar</button>
+      </div>
+      <ul id="lista-dinamica" class="lista"></ul>
+    </section>
+
+    <!-- 5. Eliminar elementos -->
+    <section id="ej5">
+      <h2>5. Eliminar elementos</h2>
+      <ul id="lista-eliminar" class="lista">
+        <li><span>Elemento A</span><button class="btn btn-peligro btn-chico">Eliminar</button></li>
+        <li><span>Elemento B</span><button class="btn btn-peligro btn-chico">Eliminar</button></li>
+        <li><span>Elemento C</span><button class="btn btn-peligro btn-chico">Eliminar</button></li>
+        <li><span>Elemento D</span><button class="btn btn-peligro btn-chico">Eliminar</button></li>
+      </ul>
+      <p id="msg-vacio-eliminar" class="vacio oculto">No quedan elementos.</p>
+    </section>
+
+    <!-- 6. Crear una lista a partir de un array -->
+    <section id="ej6">
+      <h2>6. Crear una lista a partir de un array</h2>
+      <ul id="lista-array" class="lista"></ul>
+    </section>
+
+    <!-- 7. Crear tarjetas a partir de objetos -->
+    <section id="ej7">
+      <h2>7. Crear tarjetas a partir de objetos</h2>
+      <div id="contenedor-tarjetas" class="rejilla"></div>
+    </section>
+
+    <!-- 8. Crear un formulario y mostrar sus datos -->
+    <section id="ej8">
+      <h2>8. Formulario y datos enviados</h2>
+      <form id="formulario" class="formulario" novalidate>
+        <label>Nombre
+          <input type="text" id="f-nombre" required>
+        </label>
+        <label>Correo
+          <input type="email" id="f-correo" required>
+        </label>
+        <label>Edad
+          <input type="number" id="f-edad" min="1" max="120" required>
+        </label>
+        <p id="f-error" class="error oculto"></p>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+      <div id="resultado-form" class="resultado oculto"></div>
+    </section>
+
+    <!-- 9. Lista de tareas -->
+    <section id="ej9">
+      <h2>9. Lista de tareas</h2>
+      <div class="fila">
+        <input type="text" id="input-tarea" placeholder="Nueva tarea" autocomplete="off">
+        <button id="btn-tarea" class="btn">Añadir</button>
+      </div>
+      <ul id="lista-tareas" class="lista"></ul>
+      <p id="contador-tareas" class="contador">0 tareas pendientes</p>
+    </section>
+
+    <!-- 10. CRUD completo de estudiantes -->
+    <section id="ej10">
+      <h2>10. CRUD de estudiantes</h2>
+      <form id="form-estudiante" class="formulario formulario-crud" novalidate>
+        <label>Nombre completo
+          <input type="text" id="e-nombre" required>
+        </label>
+        <label>Correo
+          <input type="email" id="e-correo" required>
+        </label>
+        <label>Carrera
+          <input type="text" id="e-carrera" required>
+        </label>
+        <label>Semestre
+          <input type="number" id="e-semestre" min="1" max="12" required>
+        </label>
+        <p id="e-error" class="error oculto"></p>
+        <div class="fila">
+          <button type="submit" id="btn-guardar" class="btn">Agregar estudiante</button>
+          <button type="button" id="btn-cancelar" class="btn btn-secundario oculto">Cancelar edición</button>
+        </div>
+      </form>
+
+      <div>
+        <table>
+          <thead>
+            <tr><th>Nombre</th><th>Correo</th><th>Carrera</th><th>Sem.</th><th>Acciones</th></tr>
+          </thead>
+          <tbody id="tabla-estudiantes"></tbody>
+        </table>
+      </div>
+      <p id="contador-estudiantes" class="contador"></p>
+    </section>
+
+  </main>
+
+  <footer>Práctica DOM · HTML, CSS y JavaScript puro</footer>
+
+  <script src="js/01-cambiar-titulo.js"></script>
+  <script src="js/02-cambiar-color.js"></script>
+  <script src="js/03-mostrar-ocultar.js"></script>
+  <script src="js/04-crear-elementos.js"></script>
+  <script src="js/05-eliminar-elementos.js"></script>
+  <script src="js/06-lista-desde-array.js"></script>
+  <script src="js/07-tarjetas-desde-objetos.js"></script>
+  <script src="js/08-formulario.js"></script>
+  <script src="js/09-lista-tareas.js"></script>
+  <script src="js/10-crud-estudiantes.js"></script>
+</body>
+</html>
